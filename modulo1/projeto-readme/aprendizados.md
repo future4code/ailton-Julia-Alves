@@ -1,0 +1,3 @@
+# Aprendizados da semana 
+
+Nessa primeira semana de onboarding da Labenu, aprendi alguns pontos técnicos (como: comandos no terminal; comandos do GIT; comandos do GIT para sincronizar nossas atividades no GitHub; utilização do Slack). Também aprendi pontos importantissimos sobre exposição de dúvidas na plataforma do slack, metodologias de ensino ativo (utilizada pela labenu) e tivemos uma super palestra sobre diversidade (**AMEI MUITOOO**) que exemplificava diversos posicionamentos que não cabem mais nos dias de hoje e apresentou diversas pautas importantissimas para uma boa convivência e trabalho em grupo (tanto na labenu, quanto na vida pessoal).
