@@ -88,19 +88,19 @@ console.log(carrinho)
 
 //Desafio
 //1)
-// function pergunta() { 
-//     const nomeDoUsuario = prompt("Qual o seu nome?")
-//     const idadeDoUsuario = prompt("Qual a sua idade")
-//     const profDoUsuario = prompt("Qual a sua profissão")
-//     const objeto1 = {
-//        nome: nomeDoUsuario,
-//        profissão: profDoUsuario,
-//        idade: idadeDoUsuario}
-//     console.log(`nome: ${objeto1.nome}, profissão: ${objeto1.profissão}, idade: ${objeto1.idade}`)
-//     console.log(typeof objeto1)
-// }
+function pergunta() { 
+    const nomeDoUsuario = prompt("Qual o seu nome?")
+    const idadeDoUsuario = prompt("Qual a sua idade")
+    const profDoUsuario = prompt("Qual a sua profissão")
+    const objeto1 = {
+       nome: nomeDoUsuario,
+       profissão: profDoUsuario,
+       idade: idadeDoUsuario}
+    console.log(`nome: ${objeto1.nome}, profissão: ${objeto1.profissão}, idade: ${objeto1.idade}`)
+    console.log(typeof objeto1)
+}
 
-// pergunta()
+pergunta()
 //2)
 const filme1 = {
     nome:"Viva: a vida é uma festa",
