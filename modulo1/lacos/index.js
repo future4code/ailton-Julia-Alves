@@ -34,7 +34,7 @@ let listaBichos = []
 if(numeroBichos===0){
     console.log("Que pena! Você pode adotar um pet")
 } else if (numeroBichos>0) {
-for(i=0;i<numeroBichos;i++ ){
+for(let i=0;i<numeroBichos;i++ ){
     let nomeBicho = prompt("Digite o nome do seu bicho")
     listaBichos.push(nomeBicho)
 }0
@@ -62,7 +62,7 @@ const criarArrPar = ()=>{
 
 for(let i=0;i<arrayOriginal.length;i++){
 if (arrayOriginal[i]%2===0){
-    par.push(arrayOriginal[i]) // dando erro aqui
+    par.push(arrayOriginal[i]) 
 }} return par
 }
 console.log(criarArrPar())
@@ -77,7 +77,7 @@ console.log(arrayString())
 const maiorMenor = () =>{
     let maior = 0
     let menor = Math.min(...arrayOriginal)
-    for(i=0;i<arrayOriginal.length;i++){
+    for(let i=0;i<arrayOriginal.length;i++){
         const elemento1 = arrayOriginal[i]
         if(elemento1>maior){
             maior= elemento1} 
@@ -86,3 +86,61 @@ const maiorMenor = () =>{
         console.log(menor)
 }
 console.log(maiorMenor())
+// Desafio
+// 1)
+let tentativas =[]
+console.log("Vamos jogar!")
+let numeroCerto = Number(prompt("Escolha um número para seu adversário advinhar:"))
+let numeroAdversario = Number(prompt("Qual número você acha que seu adversário escolheu?"))
+tentativas.push(numeroAdversario)
+
+const maiorMenor = (num1,num2)=>{
+    if (num1>num2){
+        return "MAIOR"
+    }else if (num1<num2){
+        return "MENOR"
+    }else {
+        return "Deu ruim"
+    }
+}
+while (numeroAdversario!==numeroCerto) {
+    console.log(`Errou!!
+    O número chutado foi: ${numeroAdversario}
+    O número escolhido pelo seu adversário é: ${maiorMenor(numeroCerto,numeroAdversario)}`)
+    numeroAdversario= Number(prompt("Digite outro número que você acha que seu adversário escolheu:"))
+    tentativas.push(numeroAdversario)
+}if (numeroAdversario===numeroCerto) {
+        console.log(`Acertou
+        O número de tentaivas foi: ${tentativas.length}`)
+       
+    }
+//2)
+let tentativas =[]
+console.log("Vamos jogar!")
+let numeroCerto = Math.floor(Math.random()*100)
+let numeroAdversario = Number(prompt("Qual número você acha que seu adversário escolheu?"))
+tentativas.push(numeroAdversario)
+
+const maiorMenor = (num1,num2)=>{
+    if (num1>num2){
+        return "MAIOR"
+    }else if (num1<num2){
+        return "MENOR"
+    }else {
+        return "Deu ruim"
+    }
+}
+while (numeroAdversario!==numeroCerto) {
+    console.log(`Errou!!
+    O número chutado foi: ${numeroAdversario}
+    O número escolhido pelo seu adversário é: ${maiorMenor(numeroCerto,numeroAdversario)}`)
+    numeroAdversario= Number(prompt("Digite outro número que você acha que seu adversário escolheu:"))
+    tentativas.push(numeroAdversario)
+}if (numeroAdversario===numeroCerto) {
+        console.log(`Acertou
+        O número de tentaivas foi: ${tentativas.length}`)
+       
+    }
+
+//para a alteração ter sido mais fácil eu poderia ter visto a dica, mas de qualquer forma não foi díficil, tive que buscar o comando para o computador escolher um comando de forma aleatoria
+
