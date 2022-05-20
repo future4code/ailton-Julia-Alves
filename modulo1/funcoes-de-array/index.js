@@ -49,15 +49,18 @@ const produtos = [
 const apenasNomes1 = produtos.map((item, index, array) => {
     return item.nome
  })
- 
- console.log(apenasNomes1)
- //b - não sei ainda
 
+ console.log(apenasNomes1)
+ //b 
+ const nomeBebida = produtos.map((item,index,array)=>{
+     return `Nome: ${item.nome}
+     Preço: ${item.preco*0.95}`
+ })
+console.log(nomeBebida)
  //c
  const apenasBebidas = produtos.filter((item, index, array) => {
     return item.categoria === "Bebidas"
  })
- 
  console.log(apenasBebidas)
 //d)
 const apenasYpe = produtos.filter((item, index, array) => {
@@ -70,5 +73,29 @@ const apenasYpe2 = produtos.filter((item, index, array) => {
  }).map((item,index,array)=> {
      return `Compre ${item.nome} por ${item.preco}`
  })
- 
  console.log(apenasYpe2) 
+ //Desafio 
+ //1)
+ const pokemons = [
+    { nome: "Bulbasaur", tipo: "grama" },
+    { nome: "Bellsprout", tipo: "grama" },
+    { nome: "Charmander", tipo: "fogo" },
+    { nome: "Vulpix", tipo: "fogo" },
+    { nome: "Squirtle", tipo: "água" },
+    { nome: "Psyduck", tipo: "água" },
+ ]
+ //a)
+ const ordemAlfabetica = pokemons.map((item,index,array)=>{
+     return item.nome
+ })
+ console.log(ordemAlfabetica.sort())
+ //b)
+ const tipo = pokemons.map((item,index,array)=>{
+     return item.tipo})
+     
+const tipoPokemons = tipo.filter((item,index)=>{
+         return tipo.indexOf(item)===index
+     })
+ console.log(tipoPokemons)
+ //Achei uma maneira na internet de resolver, mas não entendi como faz de verdade e porque o resultado apareceu 
+
