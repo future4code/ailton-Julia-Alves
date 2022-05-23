@@ -36,8 +36,19 @@ function retornaNumerosPares(array) {
 console.log(retornaNumerosPares(array))
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    arrayPares1=[]
+    let i =0
+    for(let i=0;i<array.length;i++){
+         if(array[i]%2===0){
+             arrayPares1.push(array[i]**2)
+         }else {
+             console.log("deu ruim") 
+         }
+          
+    } 
+    return arrayPares1
 }
+console.log(retornaNumerosParesElevadosADois(array))
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
