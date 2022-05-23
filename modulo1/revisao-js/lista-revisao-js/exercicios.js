@@ -21,9 +21,19 @@ console.log(retornaArrayOrdenado(array))
 //vi na internet e não entendi muito como funcionou 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+  arrayPares=[]
+  let i =0
+  for(let i=0;i<array.length;i++){
+       if(array[i]%2===0){
+           arrayPares.push(array[i])
+       }else {
+           console.log("deu ruim") 
+       }
+        
+  } 
+  return arrayPares
 }
-
+console.log(retornaNumerosPares(array))
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
  
