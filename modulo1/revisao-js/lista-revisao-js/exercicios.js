@@ -52,14 +52,39 @@ console.log(retornaNumerosParesElevadosADois(array))
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    let i = 0
+    let maior = -Infinity
+for(let i=0;i<array.length;i++){
+    if(array[i]>maior){
+    maior=array[i]
+    }else{
+        console.log("Deu ruim")
+    }
 }
+return maior 
+}
+console.log(retornaMaiorNumero(array))
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
+let objeto ={
+    maiorNumero:0,
+    maiorDivisivelPorMenor:0,
+    diferenca:0}
 
+    if(num1>num2){
+    objeto.maiorNumero= num1
+    objeto.maiorDivisivelPorMenor=num1%num2===0
+    objeto.diferenca= num1-num2
+    }else if (num2>=num1){
+    objeto.maiorNumero= num2
+    objeto.maiorDivisivelPorMenor=num2%num1===0
+    objeto.diferenca= num2-num1
+    }else {
+        console.log("DEU RUIM ")
+    }
+return objeto
 }
-
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
    
