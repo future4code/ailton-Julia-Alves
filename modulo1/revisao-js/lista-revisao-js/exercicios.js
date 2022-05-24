@@ -105,12 +105,12 @@ if(ladoA===ladoB && ladoA===ladoC){
     return "Escaleno"
 }
 }
-
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
-}
-
+const ordemArray = retornaArrayOrdenado(array)  
+return [ordemArray[ordemArray.length-2], ordemArray[1]]
+} 
+//queria usar pop(), splice(), math.max() e math.min() e não consegui 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
    
