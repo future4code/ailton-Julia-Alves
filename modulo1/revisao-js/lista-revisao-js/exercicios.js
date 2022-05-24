@@ -7,17 +7,14 @@
 function retornaTamanhoArray(array) {
     return array.length  
 }
-console.log(retornaTamanhoArray(array))
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
   return array.reverse()
 }
-console.log(retornaArrayInvertido(array))
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
   return array.sort((a,b)=>a-b)
 }
-console.log(retornaArrayOrdenado(array))
 //vi na internet e não entendi muito como funcionou 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
@@ -33,7 +30,6 @@ function retornaNumerosPares(array) {
   } 
   return arrayPares
 }
-console.log(retornaNumerosPares(array))
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
     arrayPares1=[]
@@ -48,8 +44,6 @@ function retornaNumerosParesElevadosADois(array) {
     } 
     return arrayPares1
 }
-console.log(retornaNumerosParesElevadosADois(array))
-
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
     let i = 0
@@ -63,8 +57,6 @@ for(let i=0;i<array.length;i++){
 }
 return maior 
 }
-console.log(retornaMaiorNumero(array))
-
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 let objeto ={
@@ -113,23 +105,32 @@ return [ordemArray[ordemArray.length-2], ordemArray[1]]
 //queria usar pop(), splice(), math.max() e math.min() e não consegui 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+   return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}.`
 }
-
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+let novoObjeto ={
+    ...pessoa,
+    nome: "ANÔNIMO",
 }
-
+return novoObjeto
+}
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+let permissao= []
+    for(let i=0; i<pessoas.length;i++){
+    if (pessoas[i].altura>=1.50 && 14<pessoas[i].idade && pessoas[i].idade<60)
+    permissao.push(pessoas[i])
+} return permissao
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
-}
+    let naoPermissao= []
+    for(let i=0; i<pessoas.length;i++){
+    if (pessoas[i].altura<1.50 || 14>=pessoas[i].idade|| pessoas[i].idade>=60)
+    naoPermissao.push(pessoas[i])}
+return naoPermissao}
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
