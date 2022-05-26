@@ -114,6 +114,9 @@ table {
     width: 60%;
     text-align:center;
 }
+.imagemTabela{
+    width: 5vw;
+}
 
 td button {
     background-color: #fadf63;
