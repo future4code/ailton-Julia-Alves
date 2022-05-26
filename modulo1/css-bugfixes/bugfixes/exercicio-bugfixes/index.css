@@ -70,7 +70,13 @@ div img {
     background-color: #2274a5;
     color: white;
 }
-
+.container {
+    height: 280px;
+    text-align: center;
+}
+div p{
+    margin-top: 30px;
+}
 #container-de-descricao>ol {
     padding: 15px 0px;
 }
@@ -81,7 +87,7 @@ div img {
 
 #container-para-comprar>p {
     color: #c44f00;
-    padding: 39px 0;
+    padding: 38px 0;
     font-size: 60px;
 }
 div>p:first-child {
