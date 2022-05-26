@@ -150,5 +150,14 @@ div img {
 }
 #lupa{
     width: 2vw;
+    margin-bottom: -14px;
   
+}
+#barra{
+    height: 30px;
+    width: 500px;
+    border-bottom: 5px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
