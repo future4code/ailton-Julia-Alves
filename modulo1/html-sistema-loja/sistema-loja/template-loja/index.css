@@ -1,0 +1,30 @@
+header{
+    background-color:white;
+    border: 0.5vw solid black;
+    margin: 0 0;
+    padding: 3vw;
+    text-align: center;
+}
+nav{
+    text-align: center;
+    color: black;
+}
+body{
+    background-color: rgb(240, 181, 225);
+    margin: 0vw;
+    padding: 3vw;
+    
+}
+footer{
+    background-color:black;
+    color: white;
+    text-align: center;
+    border: 0.5vw solid black;
+}
+#fotoInicial{
+    width: 45%;
+   margin: 5% auto;
+    text-align: center;
+    display: block;
+    border: 0.5vw solid black;
+}

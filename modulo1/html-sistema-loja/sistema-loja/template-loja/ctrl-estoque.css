@@ -1,0 +1,27 @@
+.fotos{
+    width: 15vw;
+}
+p{
+    text-align: center;
+    border: 0.2vw solid black;
+    background-color: rgb(240, 181, 225);;
+}
+nav{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    border: 0.5vw solid black;
+}
+body{
+    background-color:white;
+}
+table{
+    border: 0.5vw solid rgb(240, 181, 225);
+    text-align: center;
+    background-color:rgb(240, 181, 225);
+    margin: 0 auto;
+}
+.tabela{
+    background-color:white;
+}
