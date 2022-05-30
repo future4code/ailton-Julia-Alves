@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: paleturquoise;
+}
+.barraIcone{
+    background-color: palevioletred;
+    padding: 0px 0;
+    margin: 0 auto;
+    position: sticky;
+    top 0
+    border: 2px solid black;
+    overflow: auto;
+}
+.barraIcone a{
+    text-decoration: none;
+    color: azure;
+    float: left;
+    transition: all 0.3s ease;
+    text-align: center; 
+    width: 30%; 
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 20px;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.barraIcone a:hover {
+    background-color: paleturquoise;
+}  
+.diferente {
+    background-color: grey;
+}
+.apresentacao{
+    height: 100px;
+    margin-top: 24px;
+}
+.apresentacao h2{
+    padding: 0 46px;
+    margin: 0 auto;
+    height: auto;
+    text-align: left;
+    display: inline;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+.apresentacao #nome:hover{
+    font-size: xx-large;
+    background-color: palevioletred;
+    border-radius: 45px;
+    color: azure;
+}
+.apresentacao img{
+    width: 40px;
+    margin-left: 30px;
+    margin-right: 15px;
+    
+}
+.apresentacao img:hover{
+    width: 45px;
+    border-radius: 98%;
+    background-color: palevioletred;
+}
+.formulario h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+.imput{
+    width: 200px;
+    padding: 12px;
+    height: 2px;
+    border: 2px solid black;
+    display: block;
+    background-color: azure;
+}
+#mensagem{
+    height: 100px;
+}
+
+footer{
+    background-color: palevioletred;
+    height: 25px; 
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+#nomezinho{
+    margin-top: 5px;
+    font-size: small;
+    line-height: 20px;
+    display: block;
+    text-align: center;
+}

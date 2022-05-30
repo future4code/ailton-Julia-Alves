@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: paleturquoise;
+}
+.barraIcone{
+    background-color: palevioletred;
+    padding: 0px 0;
+    margin: 0 auto;
+    position: sticky;
+    top 0
+    border: 2px solid black;
+    overflow: auto;
+}
+.barraIcone a{
+    text-decoration: none;
+    color: azure;
+    float: left;
+    transition: all 0.3s ease;
+    text-align: center; 
+    width: 30%; 
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 20px;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.barraIcone a:hover {
+    background-color: paleturquoise;
+}  
+.diferente {
+    background-color: grey;
+}
+
+
+footer{
+    background-color: palevioletred;
+    height: 25px; 
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+#nomezinho{
+    margin-top: 5px;
+    font-size: small;
+    line-height: 20px;
+    display: block;
+    text-align: center;
+}
