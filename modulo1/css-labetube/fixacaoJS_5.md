@@ -1,4 +1,4 @@
-´´´function criarArrayNomesAnimais() {
+````function criarArrayNomesAnimais() {
     const animais = [
       { nome: "Cachorro", classificacao: "mamífero" },
       { nome: "Papagaio", classificacao: "ave" },
@@ -10,4 +10,4 @@
       return animais.nome})
       
     return nomeAnimais
-}´´´
+}```
