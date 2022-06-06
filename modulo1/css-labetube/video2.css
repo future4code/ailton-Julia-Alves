@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+  height: 84vh;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+    background-color: orange;
+    height: 8vh;   
+}
+header a{
+    text-decoration: none;
+}
+main{
+    height: 84vh;
+    text-align: center;
+    
+}
+main video{
+    width: 600px;
+}
+footer{
+    background-color: gray;
+    text-align: center;
+    height: 8vh;
+}
