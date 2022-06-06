@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 104vh;
+}
+header{
+    background-color: mediumvioletred;
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+
+}
+#bolinho{
+ width: 4vh;
+}
+#confeitaria{
+    flex-grow: 1;
+}
+main{
+    background-color: #f2d0e0;
+    flex-grow: 1;
+    display: flex;
+    border: 1px solid black;
+}
+section{
+    border: 1px solid black;
+
+}
+#barra{
+
+}
+#produtos{
+    flex-grow: 2;
+    display: flex;
+
+}
+.card1{
+    border: 1px solid darkgray;
+    text-align: center;
+}
+.card2{
+    border: 1px solid darkgray;
+    text-align: center;
+}
+.card3{
+    border: 1px solid darkgray;
+    text-align: center;
+}
+.card4{
+    border: 1px solid darkgray;
+    text-align: center;
+}
+.boloDecorado{
+    width: 20vh;
+}
+footer{
+    background-color: mediumvioletred;
+    height: 8vh;
+    text-align: center;
+    padding: 0 8px;
+
+}
+#mensagemFofa{
+    padding: 3vh;
+}
