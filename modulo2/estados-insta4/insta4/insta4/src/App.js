@@ -14,24 +14,52 @@ const MainContainer = styled.div`
 `
 
 class App extends React.Component {
+ state = {
+   card:[
+     {
+      nomeUsuario:'paulinha',
+      fotoUsuario:'https://picsum.photos/50/50',
+      fotoPost:'https://picsum.photos/200/150'
+    },
+    {
+      nomeUsuario:'marina',
+      fotoUsuario: perfil1,
+      fotoPost:paisagem1
+    },
+    {
+      nomeUsuario:'júlia',
+      fotoUsuario: perfil2,
+      fotoPost:paisagem2
+    }
+   ]};
+   adicionarPost = () =>{
+    const postNovo = this.state.ValorImput
+    const novoPost =[postNovo,...this.state.card]
+    this.setState({card:novoPost})
+    this.setState({ValorImput:""})
+  }
+  onChangeImputPost = (xuxu)=>{
+    this.setState({ValorImput:xuxu.target.value})
+  }
   render() {
+      const postCards = this.state.card.map((card) => {
+        return (
+          <Post
+          nomeUsuario={card.nomeUsuario}
+          fotoUsuario={card.fotoUsuario}
+          fotoPost={card.fotoPost}
+        />
+        );
+      });
     return (
       <MainContainer>
-        <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
-        />
-        <Post
-          nomeUsuario={'marina'}
-        fotoUsuario={perfil1}
-          fotoPost={paisagem1}
-        />
-        <Post
-          nomeUsuario={'júlia'}
-          fotoUsuario={perfil2}
-          fotoPost={paisagem2}
-        />
+       <div>{postCards}</div>
+       <imput>
+         value ={this.state.ValorImput}
+         onChange = {this.onChangeImputPost}
+         placeholder ={"nome"}
+       </imput>
+      <button onClick={this.adicionarPost}>Adiciona Post</button>
       </MainContainer>
     );
   }
