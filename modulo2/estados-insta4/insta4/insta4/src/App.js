@@ -12,6 +12,20 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
+const Formulario = styled.div`
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+gap: 4px;
+border: 1px solid grey;
+width: 300px;
+margin-bottom: 15px;
+padding: 4px 0;
+`
+const InputStyle = styled.input`
+width: 90%;
+`
 
 class App extends React.Component {
  state = {
@@ -30,16 +44,35 @@ class App extends React.Component {
       nomeUsuario:'júlia',
       fotoUsuario: perfil2,
       fotoPost:paisagem2
-    }
-   ]};
+    },
+  ],
+    valorInputNome:"",
+    valorInputFotoUsuario:"",
+    valorInputFotoPost:""  
+  };
    adicionarPost = () =>{
-    const postNovo = this.state.ValorImput
+    const postNovo = {
+      nomeUsuario: this.state.valorInputNome,
+      fotoUsuario:this.state.valorInputFotoUsuario,
+      fotoPost:this.state.valorInputFotoPost
+    };
     const novoPost =[postNovo,...this.state.card]
+
     this.setState({card:novoPost})
-    this.setState({ValorImput:""})
-  }
-  onChangeImputPost = (xuxu)=>{
-    this.setState({ValorImput:xuxu.target.value})
+    this.setState({
+      valorInputNome:"",
+      valorInputFotoUsuario:"",
+      valorInputFotoPost:""
+    });
+  };
+  onChangeInputNome = (event)=>{
+    this.setState({valorInputNome:event.target.value})
+  };
+  onChangeInputFotoUsuario = (event)=>{
+    this.setState({valorInputFotoUsuario:event.target.value})
+  };
+  onChangeImputPost = (event) =>{
+    this.setState({valorInputFotoPost:event.target.value})
   }
   render() {
       const postCards = this.state.card.map((card) => {
@@ -54,12 +87,24 @@ class App extends React.Component {
     return (
       <MainContainer>
        <div>{postCards}</div>
-       <imput>
-         value ={this.state.ValorImput}
-         onChange = {this.onChangeImputPost}
-         placeholder ={"nome"}
-       </imput>
+      <Formulario>
+       <InputStyle
+          value={this.state.valorInputNome}
+          onChange={this.onChangeInputNome}
+          placeholder={"Nome"}
+       />
+       <InputStyle
+          value={this.state.valorInputFotoUsuario}
+          onChange={this.onChangeInputFotoUsuario}
+          placeholder={"Foto Usuário"}
+       />
+       <InputStyle
+          value={this.state.valorInputFotoPost}
+          onChange={this.onChangeImputPost}
+          placeholder={"Foto do Post"}
+       />
       <button onClick={this.adicionarPost}>Adiciona Post</button>
+      </Formulario>
       </MainContainer>
     );
   }
