@@ -1,12 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 
-export default () =>{
-  return(
-    <div>
-      oioi, tudo bem
-      juju kkkkk
+function App() {
+  return (
+    <div className="App">
+     oioioi
+     
     </div>
-  )
-
+  );
 }
+
+export default App;
