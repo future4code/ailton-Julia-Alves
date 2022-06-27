@@ -24,10 +24,24 @@ const Main = styled.div`
 export default class App extends React.Component {
   state={
     playlist:[],
-    nomeInput:""
+    nomeInput:"",
+    musicas:{},
+    nomePlaylist:"", 
+    nomeMusica:"",
+    artistaMusica:"",
+    urlMusica:""
   }
   onChangeInput=(event)=>{
     this.setState({nomeInput:event.target.value})
+  }
+  onChangeMusica=(event)=>{
+    this.setState({nomeMusica:event.target.value})
+  }
+  onChangeArtista=(event)=>{
+    this.setState({artistaMusica:event.target.value})
+  }
+  onChangeUrl=(event)=>{
+    this.setState({urlMusica:event.target.value})
   }
   componentDidMount(){
     this.getAllPlaylist()
@@ -61,6 +75,29 @@ export default class App extends React.Component {
       alert(err.response.data.message)
     })
   }
+  criarMusica =()=>{
+    const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks"
+    const body= {
+      name:this.state.nomeMusica,
+      artist:this.state.artistaMusica,
+      url:this.state.urlMusica
+    }
+    axios.post(url,body,{
+      headers:{
+        Authorization: "julia-moniz-ailton"
+      }
+    })
+    .then((res)=>{
+      alert("Música cadastrada com sucesso")
+      this.setState({nomeMusica:"",
+    artistaMusica:"",
+    urlMusica:""})
+      console.log(res)
+    })
+    .catch((err)=>{
+      alert(err.response.data.message)
+    })
+  }
   apagarPlaylist =(id)=>{
     const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`
     axios.delete(url,{
@@ -76,6 +113,21 @@ export default class App extends React.Component {
       alert("Ocorreu um erro, tente novamente")
     })
   }
+  pesquisaPlaylist=(id,nome)=>{
+    const url= `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`
+    axios.get(url,{
+      headers:{
+        Authorization: "julia-moniz-ailton"
+      }
+    })
+    .then((res)=>{
+      this.setState({musicas:res.data.result})
+      this.setState({nomePlaylist:nome})
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  }
   render(){
   return (
   <AppContainer>
@@ -84,8 +136,17 @@ export default class App extends React.Component {
       playlist={this.state.playlist} 
       nomeInput={this.state.nomeInput} onChangeInput={this.onChangeInput}
       criarPlaylist={this.criarPlaylist}
-      apagarPlaylist={this.apagarPlaylist}/>
-      <Menu playlist={this.state.playlist}/>
+      apagarPlaylist={this.apagarPlaylist}
+      pesquisaPlaylist={this.pesquisaPlaylist}
+      />
+      <Menu nomeMusica={this.state.nomeMusica}
+      artistaMusica={this.state.artistaMusica}
+      urlMusica={this.state.urlMusica}
+      nomePlaylist={this.state.nomePlaylist}
+      onChangeMusica={this.onChangeMusica}
+      onChangeArtista={this.onChangeArtista}
+      onChangeUrl={this.onChangeUrl}
+      criarMusica={this.criarMusica}/>
     </Main>
     <FooterPlay/>
   </AppContainer>

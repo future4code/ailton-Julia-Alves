@@ -4,7 +4,7 @@ import { SideBox,ListaCard } from "./SideBar.styled";
 export default class SideBar extends React.Component{
   render(){
     const listaPlaylist= this.props.playlist.map((dados)=>{
-      return <ListaCard key={dados.id}>{dados.name}
+      return <ListaCard key={dados.id} onClick={()=>this.props.pesquisaPlaylist(dados.id,dados.name)}>{dados.name}
       <button onClick={()=>this.props.apagarPlaylist(dados.id)}>x</button>
       </ListaCard>
      })

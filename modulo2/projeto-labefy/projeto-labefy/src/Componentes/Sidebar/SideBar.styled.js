@@ -19,7 +19,7 @@ export const ListaCard = styled.p`
   color: white;
   font-style:italic;
   margin: 4px;
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content:space-around;
   align-items: center;
