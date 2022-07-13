@@ -1,7 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom"
 
-export const AplicationForm = ()=>{
+export const CreatTrip = ()=>{
   const navigate = useNavigate()
 
   const goBack = ()=>{
@@ -10,7 +10,7 @@ export const AplicationForm = ()=>{
 
   return(
     <div>
-      eu sou a application
+      eu sou a creat trip 
       <button onClick={goBack}>Voltar</button>
     </div>
   );
