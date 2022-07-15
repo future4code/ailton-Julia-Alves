@@ -15,7 +15,7 @@ export const Router = ()=>{
     <Routes>
       <Route index element={<Home/>}/>
       <Route exact path="/trips/list" element={<ListTrip/>}/>
-      <Route exact path="/trips/application" element={<AplicationForm/>}/>
+      <Route exact path="/trips/application/:id" element={<AplicationForm/>}/>
       <Route exact path="/login" element={<Login/>}/>
       <Route exact path="/admin/trips/list" element={<AdmHomePage/>}/>
       <Route exact path="/admin/trips/create" element={<CreatTrip/>}/>

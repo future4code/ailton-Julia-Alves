@@ -35,8 +35,8 @@ export const ListTrip = ()=>{
 const [trips,setTrips]=useState()
 const navigate = useNavigate()
 
-const goToApplication = ()=>{
-  navigate("/trips/application")
+const goToApplication = (id)=>{
+  navigate(`/trips/application/${id}`)
 }
 useEffect(()=>{
   getTrips()
@@ -61,7 +61,7 @@ const getTrips=()=>{
           <p>{dado.descrition}</p>
           <p>{dado.planet}</p>
           <p>{dado.date},{dado.durationInDays}</p>
-          <button onClick={goToApplication}> Quero me candidatar</button>
+          <button onClick={()=>{goToApplication(dado.id)}}> Quero me candidatar</button>
           </DIVQUALQUER>
         })}
       </DIVQUALQUER2>
