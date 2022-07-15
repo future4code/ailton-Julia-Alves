@@ -10,19 +10,16 @@ const HomeContainer = styled.div`
   height: 90vh;
 `
 const HomeDiv = styled.div `
-  background-color: #0095B7;
+   background: linear-gradient(to right, 	#47ABCC, #02A4D3, 	#0095B7);;
   display: flex;
   flex-direction: column;
   width: 40%;
   height: 30vh;
   margin-left: 150px;
-  opacity: 0.4;
+  opacity: 0.7;
   border-radius: 9px;
-  box-shadow: 0 0 12vh #33FFFF;
+  box-shadow: 0 0 9vh #33FFFF;
   `
-const PHome = styled.div`
-  color: pink;
-`
 export const Home = ()=>{
   return(
     <div> 
@@ -32,8 +29,10 @@ export const Home = ()=>{
         <br/>
         <br/>
         <HomeDiv>
-        <h1>Sobre nós</h1>
-        <PHome>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ex at nulla voluptatum quidem quis unde quasi nostrum, sed iste repellat omnis nihil minima. Architecto autem quas exercitationem? Ipsa, quisquam.</PHome>
+        <h3>A viagem que você sempre quis fazer e não sabia onde achar.</h3>
+        <h3>Não perca a oportunidade e se candidate</h3>
+        <br/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ex at nulla voluptatum quidem quis unde quasi nostrum, sed iste repellat omnis nihil minima. Architecto autem quas exercitationem? Ipsa, quisquam.</p>
         </HomeDiv>
       </HomeContainer>
     </div>

@@ -22,7 +22,7 @@ const DIVQUALQUER = styled.div`
     border-radius: 4px;
     margin: 50px 0px;
     width: 60%;
-    opacity: 0.8;
+    opacity: 0.7;
 `
 const DIVQUALQUER2 = styled.div`
   display: flex;

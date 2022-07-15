@@ -12,7 +12,26 @@ const ApplicationContainer = styled.div`
   height: 90vh;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  
+`
+const FormCard = styled.form`
+   background: linear-gradient(to right, 	#47ABCC, #02A4D3, 	#0095B7);
+   border-radius: 12px;
+   box-shadow: 0 0 9vh #33FFFF;
+   opacity: 0.7;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 50%;
+  height: 30vh;
+  margin: 50px;
+  gap: 10px;
+  input{
+    width: 40%;
+    border-radius: 9px;
+    
+  }
 `
 
 export const AplicationForm = ()=>{
@@ -44,14 +63,15 @@ export const AplicationForm = ()=>{
     <div>
       <Header/>
       <ApplicationContainer>
-        <form onSubmit={fazerApplication}>
+        <FormCard onSubmit={fazerApplication}>
+        <h2>Se candidate para viagem</h2>
         <input name="name" value={form.name} onChange={onChangeInput} placeholder="Nome" required></input>
         <input name="age" value={form.age} onChange={onChangeInput} placeholder="Idade" required></input>
         <input name="applicationText" value={form.applicationText} onChange={onChangeInput} placeholder="Texto de Candidatura" required></input>
         <input name="profession" value={form.profession} onChange={onChangeInput} placeholder="Profissão" required></input>
         <input name="country" value={form.country} onChange={onChangeInput} placeholder="País de origem" required pattern={"[A-Z]{3}"} title={"Código do país com 3 letras maiúsculas"}></input>
       <button>Fazer Aplicação</button>
-      </form>
+      </FormCard>
       <button onClick={goBack}>Voltar</button>
       </ApplicationContainer>
     </div>
