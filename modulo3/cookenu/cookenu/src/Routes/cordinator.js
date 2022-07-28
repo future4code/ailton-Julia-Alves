@@ -1,15 +1,15 @@
-export const goToLogin = (history)=>{
-  history.push("/login")
+export const goToLogin = (navigate)=>{
+  navigate("/login")
 }
-export const goToSingUp = (history)=>{
-  history.push("/cadastro")
+export const goToSingUp = (navigate)=>{
+  navigate("/cadastro")
 }
-export const goToRecipeList = (history,id)=>{
-  history.push("/")
+export const goToRecipeList = (navigate)=>{
+  navigate("/")
 }
-export const goToRecipeDetails = (history)=>{
-  history.push(`/detalhe/${id}`)
+export const goToRecipeDetails = (navigate,id)=>{
+  navigate(`/detalhe/${id}`)
 }
-export const goToAddRecipes = (history)=>{
-  history.push("/adicionar-receita")
+export const goToAddRecipes = (navigate)=>{
+  navigate("/adicionar-receita")
 }
