@@ -7,9 +7,10 @@ const SingUpForm = ()=>{
 
   const onSubmitForm = (event)=>{
     event.preventDefault()
+    console.log(form)
+    clear()
   }
   return(
-    
       <form onSubmit={onSubmitForm}>
         <InputContainer>
         <InputLogin placeholder="Nome" name={"name"} value={form.name} onChange={onChange} type={"text"} required/>
