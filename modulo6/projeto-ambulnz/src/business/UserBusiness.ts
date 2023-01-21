@@ -1,8 +1,8 @@
-import { UserDatabase } from "../database/UserDatabase"
+/* import { UserDatabase } from "../database/PizzaDatabase"
 import { NotFoundError } from "../errors/NotFoundError"
 import { ConflictError} from "../errors/ConflictError"
 import { ParamsError} from "../errors/ParamsError"
-import { ILoginInputDTO, ILoginOutputDTO, ISignupInputDTO, ISignupOutputDTO, User, USER_ROLES } from "../models/User"
+import { ILoginInputDTO, ILoginOutputDTO, ISignupInputDTO, ISignupOutputDTO, User, USER_ROLES } from "../models/Pizza"
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
 import { IdGenerator } from "../services/IdGenerator"
@@ -133,4 +133,4 @@ export class UserBusiness {
 
         return response
     }
-}
+} */

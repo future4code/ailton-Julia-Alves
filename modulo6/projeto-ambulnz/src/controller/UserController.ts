@@ -1,7 +1,7 @@
-import { Request, Response } from "express";
+/* import { Request, Response } from "express";
 import { UserBusiness } from "../business/UserBusiness";
 import { BaseError } from "../errors/BaseError";
-import { ILoginInputDTO, ISignupInputDTO } from "../models/User";
+import { ILoginInputDTO, ISignupInputDTO } from "../models/Pizza";
 
 export class UserController {
     constructor(
@@ -44,4 +44,4 @@ export class UserController {
             res.status(500).send({ message: "Erro inesperado ao cadastrar usuário" })
         }
     }
-}
+} */
