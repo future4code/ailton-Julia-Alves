@@ -2,7 +2,7 @@ export interface IOrderDB {
     id: string
 }
 
-export interface IOrderItemsDB {
+export interface IOrderItemDB {
     id: string,
     pizza_name:string,
     quantity: number,
@@ -42,4 +42,23 @@ export class Order {
         return this.orderItems.filter(orderItem => orderItem.id !== idToRemove)
     }
 
+}
+
+export interface ICreateOrderInputDTO  {
+    pizzas:{
+        name: string,
+        quantity: number
+    }[]
+}
+
+export interface ICreateOrderOutputDTO  {
+    message: string,
+    order:{
+        id: string,
+        pizzas:{
+            name:string,
+            quantity:number
+        }[],
+        total: number
+    }
 }
