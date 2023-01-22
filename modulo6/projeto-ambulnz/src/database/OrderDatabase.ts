@@ -28,4 +28,22 @@ export class OrderDatabase extends BaseDatabase {
 
         return result[0].price as number
     }
+
+    public getOrders = async (): Promise<IOrderDB[]> => {
+        const result: IOrderDB[] = await BaseDatabase
+            .connection(OrderDatabase.TABLE_ORDERS)
+            .select()
+
+        return result
+    }
+
+    public getOrderItem = async (orderID: string): Promise<IOrderDB[]> => {
+        const result: IOrderItemDB[] = await BaseDatabase
+        .connection(OrderDatabase.TABLE_ORDER_ITEMS)
+        .select()
+        .where({order_id: orderID})
+
+        return result
+        
+    }
 }

@@ -14,3 +14,4 @@ const orderController = new OrderController(
 )
 
 orderRouter.post("/", orderController.createOrder)
+orderRouter.get("/", orderController.getOrders)

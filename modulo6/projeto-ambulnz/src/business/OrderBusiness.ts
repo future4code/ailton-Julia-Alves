@@ -1,7 +1,7 @@
 import { OrderDatabase } from "../database/OrderDatabase"
 import { NotFoundError } from "../errors/NotFoundError"
 import { ParamsError } from "../errors/ParamsError"
-import { ICreateOrderInputDTO, ICreateOrderOutputDTO, IOrderItemDB} from "../models/Order"
+import { ICreateOrderInputDTO, ICreateOrderOutputDTO, IGetOrdersOutputDTO, IOrderItemDB, Order} from "../models/Order"
 import { IdGenerator } from "../services/IdGenerator"
 
 export class OrderBusiness {
@@ -67,5 +67,46 @@ export class OrderBusiness {
              }
         }
     return response 
+    }
+
+    public getOrders = async (): Promise<IGetOrdersOutputDTO> => {
+
+        const ordersDB = await this.orderDatabase.getOrders()
+
+        const orders: Order[] = []
+
+        for(let orderDB of ordersDB){
+            const order = new Order(
+                orderDB.id,
+                []
+            )
+
+            const orderItemsDB: any = await 
+                this.orderDatabase.getOrderItem(order.getId())
+            
+                for (let orderItemDB of orderItemsDB){
+                const price = await this.orderDatabase.getPrice(orderItemDB.pizza_name)
+                
+                orderItemDB.price = price
+            }
+
+            order.setOrderItems(orderItemsDB) 
+           
+            orders.push(order)
+        }
+
+        const response: IGetOrdersOutputDTO = {
+           orders: orders.map((order) => ({
+            id: order.getId(),
+            pizzas: order.getOrderItems().map((item) => ({
+                name: item.pizza_name,
+                quantity: item.quantity,
+                price: item.price
+            })),
+            total: order.getTotal()
+           }))
+        } 
+
+        return response 
     }
 } 
