@@ -52,11 +52,11 @@ export class Pizza {
     }
 }
 
-/* export interface IGetPizzasOutputDTO{
+export interface IGetPizzasOutputDTO{
     message: string,
     pizzas:{
         name: string,
         price: number,
-        ingreients: string[]
-    }
-} */
+        ingredients: string[]
+    }[]
+} 

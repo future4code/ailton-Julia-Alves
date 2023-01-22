@@ -14,7 +14,7 @@ export class PizzaDatabase extends BaseDatabase {
         }
     }
 
-  /*   public getPizzas = async (): Promise<IPizzaDB[]> => {
+   public getPizzas = async (): Promise<IPizzaDB[]> => {
         const result: IPizzaDB[] = await BaseDatabase
             .connection(PizzaDatabase.TABLE_PIZZAS)
             .select()
@@ -29,9 +29,20 @@ export class PizzaDatabase extends BaseDatabase {
         .where({pizza_name: pizzaName})
 
         return result.map(item => item.ingredient_name)
+        
     }
 
-    public getPizzasFomatted = async (): Promise<any[]> => {
+
+     /*  public getIngredients = async (pizzaName: string): Promise<string[]> => {
+        const result: IPizzasIngredientsDB[] = await BaseDatabase
+        .connection(PizzaDatabase.TABLE_PIZZAS_INGREDIENTS)
+        .select()
+        .where({pizza_name: pizzaName})
+
+        return result.map(item => item.ingredient_name) 
+    }   */
+
+    /* public getPizzasFomatted = async (): Promise<any[]> => {
         const result: IPizzaDB[] = await BaseDatabase
             .connection.raw(`
             SELECT * FROM Amb_Pizzas
