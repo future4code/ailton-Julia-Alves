@@ -84,7 +84,7 @@ export class OrderBusiness {
             const orderItemsDB: any = await 
                 this.orderDatabase.getOrderItem(order.getId())
             
-                for (let orderItemDB of orderItemsDB){
+            for (let orderItemDB of orderItemsDB){
                 const price = await this.orderDatabase.getPrice(orderItemDB.pizza_name)
                 
                 orderItemDB.price = price
