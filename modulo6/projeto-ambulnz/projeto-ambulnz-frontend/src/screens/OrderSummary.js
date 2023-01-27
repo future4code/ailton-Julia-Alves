@@ -7,6 +7,7 @@ export const ContainerSections = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 5px;
 
     h1{
         font-size: 1.5em ;

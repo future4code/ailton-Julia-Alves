@@ -7,8 +7,9 @@ export const ContainerDiv = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     width: auto;
-    border: 8px solid red;
-    border-radius: 8px;
+    border: 3px solid black;
+    box-shadow: 4px 4px #ff5252;
+    border-radius: 5px;
 
     > div{
         position: relative;

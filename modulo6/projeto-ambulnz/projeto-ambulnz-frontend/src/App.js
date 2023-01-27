@@ -8,6 +8,26 @@ import OrderSuccessPopup from "./components/Popup";
 
 export const ContainerMain = styled.main`
   display: flex;
+  background-color: white;
+  height: 90%;
+`
+
+export const ContainerPage = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
+
+export const Header = styled.h1`
+  text-align: center;
+  background-color:#e61919 ;
+  color: white;
+`
+
+export const Footer = styled.footer`
+  background-color: #e61919 ;
+  color: white;
+  text-align: center;
 `
 
 function App() {
@@ -114,20 +134,24 @@ function App() {
   }
 
   return (
-    <ContainerMain>
-      <PizzaMenu addToCart={addToCart}/>
-      <OrderSummary 
-      cart={cart} 
-      removeFromCart={removeFromCart}
-      calculateTotal={calculateTotal}
-      total={total}
-      confirmOrder ={confirmOrder}
-      />
-      {orderSucessPopupState.isActive && <OrderSuccessPopup 
-      order={orderSucessPopupState.summary}
-      closePopup={closePopup}
-      />}
-    </ContainerMain>
+    <ContainerPage>
+      <Header>PIZZA DELIVERY - AmbulnzLLC</Header>
+      <ContainerMain>
+        <PizzaMenu addToCart={addToCart}/>
+        <OrderSummary 
+          cart={cart} 
+          removeFromCart={removeFromCart}
+          calculateTotal={calculateTotal}
+          total={total}
+          confirmOrder ={confirmOrder}
+        />
+       {orderSucessPopupState.isActive && <OrderSuccessPopup 
+          order={orderSucessPopupState.summary}
+        closePopup={closePopup}
+        />}
+      </ContainerMain>
+      <Footer>Júlia Moniz ~ https://github.com/JuliaMoniz27</Footer>
+    </ContainerPage>
   );
 }
 

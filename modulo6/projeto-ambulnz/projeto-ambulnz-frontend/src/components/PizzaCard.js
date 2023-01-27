@@ -6,12 +6,31 @@ export const ContainerLi = styled.li`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 4px 4px #ff5252;
+    border-radius: 8px;
+    background-color: white;
     p{
         font-size: 12px;
         margin-left: 5PX;
     }
     h3{
         text-align: center;
+    }
+    
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 3px;
+        user-select: none;
+        white-space: nowrap;
+        :hover {
+            background-color: #ff5252;
+            transition: 0.15s ease;
+            cursor: pointer;
+            font-weight: bold;
+        } 
     }
 `
 
