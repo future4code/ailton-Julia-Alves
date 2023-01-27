@@ -5,11 +5,11 @@ export const ContainerItem = styled.li`
 `
 
 function OrderItemCard(props) {
-    const {pizza} = props
+    const {pizza, removeFromCart} = props
     return(
         <ContainerItem>
             <p>Pizza {pizza.name} - {pizza.price.toLocaleString('pt-br',{style:'currency', currency:'USD'})} X {pizza.quantity}</p>
-            <button>Remover Item</button>
+            <button onClick={() => removeFromCart(pizza)}>Remover Item</button>
         </ContainerItem>
     )
 }
